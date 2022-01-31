@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.16.1",
+    "npm": "6.14.12"},
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild" : "cd e-commerceClient && npm install && npm run build"
