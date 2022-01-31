@@ -1,12 +1,11 @@
 {
-  "name": "e-commerce-backend",
+  "name": "e-commerce",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild" : "cd e-commerceClient && npm install && npm run build"
+    "heroku-postbuild": "cd e-commerceClient && npm install && npm run build"
   },
   "author": "Komal Tolambia",
   "license": "ISC",
@@ -25,5 +24,6 @@
   },
   "engines": {
     "node": "14.16.1",
-    "npm": "6.14.12"}
+    "npm": "6.14.12"
+  }
 }

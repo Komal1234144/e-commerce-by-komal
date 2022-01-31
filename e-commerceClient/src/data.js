@@ -77,4 +77,3 @@ export const sliderItems = [
       img:"https://i.ibb.co/chc9sBs/long-jacket-removebg-preview.png",
     },
   ]
-  

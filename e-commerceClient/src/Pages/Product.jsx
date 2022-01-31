@@ -143,7 +143,7 @@ const Product = () => {
    
     const getProduct =async()=>{
     try{
-      const res = await fetch(`https://e-commerce-by-komal.herokuapp.com/api/products/${id}`, {
+      const res = await fetch(`http://localhost:3001/api/products/${id}`, {
         method : 'GET',
       })
       const data = await res.json();
