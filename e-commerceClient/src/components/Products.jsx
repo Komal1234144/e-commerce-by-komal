@@ -20,8 +20,8 @@ const Products = ({category , filters , sort}) => {
   const getProducts = async()=>{
     try{
    const res = await fetch( category ? 
-    `http://localhost:3001/api/products?category=${category}` :
-     `http://localhost:3001/api/products`, {
+    `https://e-commerce-by-komal.herokuapp.com/api/products?category=${category}` :
+     `https://e-commerce-by-komal.herokuapp.com/api/products`, {
      method : 'GET',
    });
    const data = await res.json();

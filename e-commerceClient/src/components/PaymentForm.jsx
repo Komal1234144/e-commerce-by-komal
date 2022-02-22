@@ -139,7 +139,7 @@ export default function PaymentForm() {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post("http://localhost:3001/api/checkout/payment", {
+            const response = await axios.post("https://e-commerce-by-komal.herokuapp.com/api/checkout/payment", {
                 amount: 1000,
                 id
             })
