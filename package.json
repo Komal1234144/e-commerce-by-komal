@@ -17,10 +17,10 @@
     "mongoose": "^6.1.7",
     "nodemon": "^2.0.15",
     "stripe": "^8.199.0",
-    "uniqid": "^5.4.0"
+    "uniqid": "^5.4.0",
+    "dotenv": "^14.3.2"
   },
   "devDependencies": {
-    "dotenv": "^14.3.2",
     "mini-css-extract-plugin": "2.4.5"
   },
   "engines": {
