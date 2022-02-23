@@ -199,27 +199,7 @@ export default function PaymentForm() {
   </Styled.Wrapper> 
 </Styled.Container>
         }
-    
-        <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        close={!open}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 200,
-        }}
-      >
-        <Fade in={open}>
-          <div className={classes.paper}>
-            <h2 style={{fontSize:'25px'}} id="transition-modal-title">Processing...</h2>
-            <p style={{fontSize:'15px'}}id="transition-modal-description">Please wait for a moment.</p>
-          </div>
-        </Fade>
-      </Modal>
-     
+         
   
       <Products>
       <Title> YOUR ORDER </Title>
