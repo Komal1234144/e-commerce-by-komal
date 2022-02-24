@@ -113,7 +113,7 @@ const [errorMsg , setErrorMsg] = useState('');
  
   return (
       <Container>
-      <Image src="https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt='' />
+      <Image src='https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'  alt=''/>
       <Logo>E-COM.</Logo>
       <Wrapper>
         <h1>SIGN IN</h1>

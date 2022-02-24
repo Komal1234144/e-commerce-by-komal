@@ -10,12 +10,17 @@ const Container = styled.div`
   height: 100vh;
   box-sizing : border-box;
   position: relative;  
+ // background-image: url('https://i.ibb.co/w4cktLs/Register-Final.jpg');
+  background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/w4cktLs/Register-Final.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100vh;
+  
 `
 const Image = styled.img`
   width : 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(70%);
+  
   
 `
 const Wrapper = styled.div`
@@ -31,8 +36,8 @@ const Wrapper = styled.div`
    box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.5), 0 6px 20px  rgba(0, 0, 0, 0.19);
 
   ${mobile({
-    width : '60%',
-    maxHeight : '80%',
+    width : '80%',
+    maxHeight : '95%',
     top : '15%',
     left : '50px'
   })}
@@ -115,7 +120,7 @@ const handleClick = async() =>{
 
   return (
       <Container>
-        <Image src="https://i.ibb.co/w4cktLs/Register-Final.jpg" alt='' />
+       
         <Logo>E-COM.</Logo>
         <Wrapper>
           <h1>CREATE AN ACCOUNT</h1>

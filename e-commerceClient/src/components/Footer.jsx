@@ -74,7 +74,7 @@ const ListItem = styled.li`
 `
 const Right = styled.div`
   flex : 1;
-  padding : 10px;
+  padding: clamp(2px , 1vw , 10px);
   font-size: clamp(10px , 1.5vw , 20px);
  
   &>h1{
