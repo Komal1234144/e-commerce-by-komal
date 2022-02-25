@@ -21,9 +21,7 @@ export const GoBack = styled.button`
      text-decoration: none;
      color : white;
  }
- 
 `
-
 export const Wrapper = styled.div`
   width : 50%;
   min-height: 90%;

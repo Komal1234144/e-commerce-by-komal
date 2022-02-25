@@ -187,7 +187,9 @@ export default function PaymentForm() {
    {formError && <Styled.FormError>{formError}</Styled.FormError>}
   <Styled.Form onSubmit={handleSubmit}>
     <Styled.Label>Card no:</Styled.Label>
-    <Styled.CardWrapper><CardNumberElement/></Styled.CardWrapper>
+    <Styled.CardWrapper>
+    <CardNumberElement/>
+    </Styled.CardWrapper>
     <Styled.Label>Expiry Date:</Styled.Label>
     <Styled.CardWrapper><CardExpiryElement/></Styled.CardWrapper>
     <Styled.Label>CVC :</Styled.Label>

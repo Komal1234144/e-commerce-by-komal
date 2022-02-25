@@ -6,11 +6,12 @@ const Container = styled.div`
   padding : clamp(20px , 3vw , 50px);
   box-sizing: border-box;
   background-color : #e7dae4;
+  margin: auto;
   display: flex;
   flex-direction : column;
   justify-content: center;
   align-items: center;
-
+  border : 1px solid red;
  &>h1{
      font-size: clamp(25px , 3vw , 50px);  
  }
@@ -22,22 +23,22 @@ const Container = styled.div`
  }
 `
 const InputContainer = styled.div`
-   width : clamp(200px , 40% , 1000px);
+   width : clamp(220px , 40% , 1000px);
    height : clamp(20px , 4vw , 50px);
    display: flex;
    justify-content: space-between;
-  
    &>input{
-      flex : 7;
+      flex : 4;
       border : none;
-      margin-right: 10px;
-      padding : clamp(15px , 1vw , 20px);
+      margin-right: 5px;
+      padding : 0.7em 0;
+      padding-left: 0.5em;
       font-size: clamp(15px , 1.5vw , 20px);
    }
 
    &>button{
        flex: 1;
-       padding : clamp(15px , 1vw , 20px);
+       padding : 0.7em 0;
        display: flex;
        justify-content: center;
        align-items: center;
