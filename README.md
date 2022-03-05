@@ -8,7 +8,7 @@ website url - https://e-commerce-by-komal.herokuapp.com/
 
 <p>Install and run e-commerce app with npm, go to the application's folder and run these commands.</p>
 
-    Run 'npm' in root folder to install dependencies 
+    Run 'npm intsall' in root folder to install dependencies 
     Run 'npm start' in client folder to start the website
 
 <h1>Demo</h1>
