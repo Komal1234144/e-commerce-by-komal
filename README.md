@@ -7,17 +7,16 @@ website url - https://e-commerce-by-komal.herokuapp.com/
 <h1>Installation</h1>
 
 <p>Install and run e-commerce app with npm, go to the application's folder and run these commands.</p>
-<div width="100%" height="100%">
-        <p>For installing dependencies -> run 'npm' in root folder</p>
-        <p>cd e-commerceClient -> run 'npm start'</p>
-</div>
+
+    Run 'npm' in root folder to install dependencies 
+    Run 'npm start' in client folder to start the website
 
 <h1>Demo</h1>
 
-<img src="https://i.ibb.co/j8Bj6yx/e-commerce-gif.gif" width="80%" height="80%" margin="auto" ></img>
+<img src="https://i.ibb.co/YpR7w9Y/ezgif-com-gif-maker-2.gif" width="80%" height="80%" margin="auto" ></img>
 
 
-<a href="https://i.ibb.co/j8Bj6yx/e-commerce-gif.gif">https://i.ibb.co/j8Bj6yx/e-commerce-gif.gif</a>
+<a href="https://i.ibb.co/YpR7w9Y/ezgif-com-gif-maker-2.gif">https://i.ibb.co/YpR7w9Y/ezgif-com-gif-maker-2.gif</a>
 
 <h1>About Me</h1>
   
