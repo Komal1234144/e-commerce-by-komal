@@ -71,7 +71,7 @@ const Logo = styled.div`
 
 const Agreement = styled.p`
   margin : 20px 0;
-  font-size : clamp(15px , 1.2vw , 25px);
+  font-size : clamp(12px , 1vw , 22px);
   line-height: 20px;
 `
 const Button = styled.button`
@@ -82,6 +82,7 @@ const Button = styled.button`
   font-size: clamp(10px , 1vw , 20px);
   border: none;
   cursor: pointer;
+  margin-top: 20px;
   transition: all 0.5s ease;
 
   &:hover{

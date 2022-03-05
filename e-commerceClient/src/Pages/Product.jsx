@@ -16,8 +16,13 @@ const Container = styled.div`
 `
 const Wrapper = styled.div`
   display : flex;
+  margin-top: '10vh';
+  height : 65vh;
+  
   ${mobile({
-    flexDirection : 'column'
+    height : '70vh',
+    flexDirection : 'column',
+    marginTop : '2.5vh'
   })}
 `
 const ImageContainer= styled.div`
@@ -25,38 +30,63 @@ const ImageContainer= styled.div`
   padding : clamp(20px , 2vw , 50px);
   display : flex;
   justify-content: center;
- 
+  background-color: aliceblue;
+     
+  ${mobile({
+     height : '50%'
+    })} 
   &>img{
     display : block;
-    width :clamp(200px , 18vw , 800px);
-   
+    width : 35%
+
+    ${mobile({
+      width : '50%'
+    })}
   }
 `
 const InfoContainer = styled.div`
   flex : 1;
   padding : clamp(20px , 2vw , 50px);
- 
+  margin-top: 20px;
+
+  ${mobile({
+     height : '50%',
+     margin : '0px'
+    })} 
+  &>h1{
+    font-size: clamp(18px , 2vw , 25px);
+    margin : 0px;
+  }
   &>p{
     margin : 30px 0;
-   font-size: large;
+    font-size: clamp(15px , 1.2vw , 20px);
     font-weight: 500;
+    ${mobile({
+     margin : '10px 0'
+    })} 
   }
 
   &>span{
-      font-size: 30px;
+      font-size: clamp(18px , 2vw , 25px);
   }
 `
 const FilterContainer = styled.div`
   margin : 50px 0;
-  width : 70%;
+  max-width : 70%;
   display: flex;
   justify-content: space-between;
  
+ ${mobile({
+   maxWidth : '100%',
+   margin : '20px 0'
+ })}
 `
 const ColorFilter = styled.div`
   flex : 1;
   display: flex;
   margin-right: 20px;
+ 
+  ${mobile({marginRight : '0px'})}
 `
 const FilterText = styled.p`
   font-size: 20px;
@@ -67,6 +97,7 @@ const Color = styled.div`
   height: 30px;
   border-radius: 50%;
   margin-right: 5px;
+  border : 2px solid black;
   background-color: ${(props)=>props.bg};
   display : flex;
   align-items: center;
@@ -84,13 +115,15 @@ const FilterSelect = styled.select`
 const FilterOption = styled.option``
 
 const CartContainer = styled.div`
+   margin : 50px 0;
+  max-width : 70%;
   display: flex;
   justify-content: space-between;
-  max-width : 70%;
-  margin-top : 50px;
-  ${mobile({
-    maxWidth : '100%'
-  })}
+
+ ${mobile({
+   maxWidth : '100%',
+   margin : '20px 0'
+ })}
   
   &>div{
     flex : 1;
@@ -107,18 +140,19 @@ const CartContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: large;
+      font-size: clamp(10px , 1vw , 15px);
       
     }
   }
   &>button{
-     margin-right: 60px;
-     padding : 0.5em ;
+     flex : 1;
+     padding : 0.3em ;
      background-color: transparent;
      border : 3px solid teal;
      letter-spacing: -0.5px;
      font-weight: 700;
      cursor : pointer;
+     font-size: clamp(10px , 1vw , 15px);
      ${mobile({
        marginRight : '20px'
      })}

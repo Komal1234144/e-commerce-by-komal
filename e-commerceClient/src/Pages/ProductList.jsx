@@ -12,11 +12,19 @@ const Container = styled.div`
   max-width : 100vw;
   box-sizing: border-box;
   overflow-x : hidden;
+  
+  &>div{
+   
+    &>h1{
+      margin : 20px;
+      font-size: clamp(25px , 2.8vw , 30px);
+      margin-left : 20px;
 
-  &>h1{
-      margin : clamp(10px , 1vw , 20px);
-      font-size: clamp(20px , 2.5vw , 30px); 
+      ${mobile({margin : '5px',
+    })}
   }
+  }
+  
 `
 const FilterContainer = styled.div`
   display : flex;
@@ -51,6 +59,7 @@ const ProductList = () => {
  const handleFilter=(e)=>{
    let filterName = e.target.name
    let value = e.target.value;
+  
    setFilters({
      ...filters,
       [filterName] : value
@@ -61,16 +70,16 @@ const ProductList = () => {
  const handleSort = (e)=>{
    setSort(e.target.value) 
  }
- 
+
     return (
         <Container>
           <Nav/>
-          <Announcement/>
+          <div style={{marginTop : '11vh'}}>
           <h1>{category}</h1>
           <FilterContainer>
             <Filter>
               <FilterText>Filter Products :</FilterText>
-              <Select name="color" onChange={handleFilter} defaultValue={"Color"}>
+              <Select name="color" onChange={handleFilter} defaultValue='Color'>
                 <Option disabled >Color</Option>
                 <Option>All</Option>
                 <Option>Black</Option>
@@ -81,7 +90,7 @@ const ProductList = () => {
                 <Option>Green</Option>
                 <Option>Brown</Option>
               </Select>
-              <Select name="size" onChange={handleFilter} defaultValue={'Size'}>
+              <Select name="size" onChange={handleFilter} defaultValue="Size">
               <Option disabled >Size</Option>
               <Option>All</Option>
               <Option>XS</Option>
@@ -103,6 +112,7 @@ const ProductList = () => {
           <Products category={category} filters={filters} sort={sort}/>
           <Newsletter/>
           <Footer/>
+          </div>
         </Container>
     )
 }

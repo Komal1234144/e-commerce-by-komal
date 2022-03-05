@@ -4,6 +4,7 @@ import {login} from '../Redux/apiCalls';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Container = styled.div`
   width : 100vw;
@@ -108,6 +109,8 @@ const [errorMsg , setErrorMsg] = useState('');
       setTimeout(()=>{
         setErrorMsg('')
       },1500)
+    }else{
+      navigate('/cart')
     }
   }
  

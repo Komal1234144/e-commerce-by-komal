@@ -17,6 +17,11 @@ const Container = styled.div`
 const Wrapper = styled.div`
   padding : clamp(0px , 1.5vw , 20px);
   margin-bottom: 30px;
+  margin-top: 10vh;
+
+  ${mobile({
+    marginTop : '7vh'
+  })}
 `
 
 const Title = styled.h1`
@@ -39,6 +44,7 @@ const Button = styled.button`
   background-color : ${(props)=>props.type ==='filled' ? 'black' : 'white'};
   color : ${(props)=>props.type ==='filled' ? 'white' : 'black'};
   border : 3px solid black;
+  cursor : pointer;
 `
 
 const Links = styled.div`
@@ -68,35 +74,38 @@ const Products = styled.div`
 `
 
 const Product = styled.div`
-   max-height: 200px;
+   height: 300px;
    display : flex;
-   margin: 30px 0;
-   max-height : 400px;
+   margin: 20px 0; 
+   border-bottom: 1px solid grey;
+   ${mobile({
+     height: "180px",
+     position:  'relative'
+   })}
 `
 
 const ImageContainer = styled.div`
   flex : 1;
-  min-width : 170px;
   display : flex;
   justify-content: center;
- 
-  &>img{
-      display: block;
-      object-fit: contain;
-
-      ${mobile({
-        alignSelf : 'center',
-        objectFit :'cover'
-      })}
-  }
+  align-items: center;
+  
 `
-
+const Img = styled.img`
+    width : 100%;
+    height: 280px;
+    object-fit: contain;
+  
+      ${mobile({
+        height : '160px', 
+      })}
+`
 const InfoContainer = styled.div`
    padding : 0 20px;
    flex : 2;
    display: flex;
    ${mobile({
-      flexDirection : 'column'
+      flexDirection : 'column'  
       })}
 `
 
@@ -139,7 +148,6 @@ const PriceDetails = styled.div`
 `
 
 const Price = styled.p``
-
 
 const Summary = styled.div`
  flex : 1;
@@ -188,9 +196,14 @@ const RemoveFromCart = styled.button`
     border : none;
     background-color: teal;
     color : white;
-    font-size: clamp(10px , 1.5vw , 15px);
+    font-size: clamp(10px , 1vw , 15px);
     height : 3em;
-    padding : 1em;
+    padding : 0.5em;
+
+    ${mobile({
+      position : 'absolute',
+      right : '15px'
+    })}
 `
 const Piece = styled.p``
 
@@ -202,12 +215,12 @@ const user = useSelector((state)=>state.persistedReducer.user);
 
 const checkOut = (e)=>{
   e.preventDefault();
- 
-  if(user.currentUser === null){
-    navigate('/register')   
-  }else{
-    navigate('/checkout')
-  }
+  navigate('/checkout')
+  // if(user.currentUser === null){
+  //   navigate('/register')   
+  // }else{
+  //   navigate('/checkout')
+  // }
 }
 
 const dispatch = useDispatch()
@@ -218,7 +231,6 @@ const handleRemove = (id , price , quantity) =>{
   return (
     <Container>
       <Nav/>
-      <Announcement/>
       <Wrapper>
         <Title>YOUR BAG</Title>
         <TopContainer>
@@ -230,13 +242,13 @@ const handleRemove = (id , price , quantity) =>{
               <Product key={`${product._id}0`}>
               <ImageContainer>
               <Link to={`/product/${product._id}`}>
-               <img src={product.img} alt=''/>
+               <Img src={product.img} alt=''/>
               </Link>  
              </ImageContainer>
               <InfoContainer>
                 <ProductDetails>
                   <p><b>Product :</b> {product.title}</p>
-                  <Pid><b>ID :</b>{product._id}</Pid>
+                  <Pid><b>ID : </b>{product._id}</Pid>
                   <ProductColor color={product.color}/>
                   <p><b>Size : </b>{product.size}</p>
                 </ProductDetails>
@@ -253,7 +265,7 @@ const handleRemove = (id , price , quantity) =>{
               </InfoContainer>
             </Product>
               )}
-            
+          
           
           </Products>
           <Summary>

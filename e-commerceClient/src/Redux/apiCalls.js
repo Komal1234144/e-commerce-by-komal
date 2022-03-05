@@ -12,7 +12,6 @@ export const login=async(dispatch , user)=>{
       const data = await res.json()
       console.log(data)
       dispatch(loginSuccess(data));
-     
    }catch(err){
        console.log(err)
        dispatch(loginFailure())

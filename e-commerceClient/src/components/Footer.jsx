@@ -25,8 +25,8 @@ const Logo = styled.h1`
 const Desc = styled.p`
   margin-top : clamp(10px  , 2vw  , 30px );
   margin-bottom  : clamp(10px  , 2vw  , 30px );
-  font-size: clamp(10px , 1vw , 20px);
-  font-weight: bold;
+  font-size: clamp(10px , 1.5vw , 20px);
+  font-weight: 100;
   letter-spacing: 0.5px;
   line-height: clamp(15px , 1.5vw , 30px);
   
@@ -44,6 +44,7 @@ const SocialIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor : pointer;
 `
 
 const Center = styled.div`
@@ -84,18 +85,19 @@ const Right = styled.div`
 `;
 
 const Address = styled.p`
-  margin-bottom : 20px;
-  
+  margin-bottom : 20px; 
   display: flex;
+  align-items: center;
 `
 const Contact = styled.p`
 margin-bottom : 20px;
-
 display: flex;
+align-items: center;
 `
 const Email = styled.p`
 margin-bottom : 20px;
 display: flex;
+align-items: center;
 `
 const Payment = styled.img`
    max-width : 200px;

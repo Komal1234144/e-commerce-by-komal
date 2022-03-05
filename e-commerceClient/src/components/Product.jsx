@@ -2,9 +2,10 @@ import styled from "styled-components"
 import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { useDispatch } from "react-redux";
 import { addProduct } from "../Redux/cartSlice";
+import { useState } from "react";
+import { mobile } from "../Responsive";
 
 const Info = styled.div`
    opacity: 0;
@@ -16,7 +17,24 @@ const Info = styled.div`
    width : 100%;
    background-color : rgba(0,0,0,0.6);
    z-index: 3;
-   transition: all 0.5s ease;
+   transition: all 0.7s ease-in;
+`
+
+const Icon = styled.div`
+  width : 40px;
+  height : 40px;
+  border-radius: 50%;
+  margin : 5px;
+  background-color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor : pointer;
+  transition:  all 2s ease;
+
+  &:hover{
+      transform : scale(1.2)
+  }
 `
 
 const Container = styled.div`
@@ -29,34 +47,22 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
- 
+  
  &:hover ${Info}{
-     opacity: 1;
+    opacity: 1;
+ }
+
+ &:hover ${Icon}{
+   display : flex;
  }
 `
+
 const Image = styled.img`
    width: 100%;
    height: 100%;
    z-index: 2;
    object-fit: contain;
    
-`
-
-const Icon = styled.div`
-  width : 40px;
-  height : 40px;
-  border-radius: 50%;
-  margin : 5px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor : pointer;
-  transition:  all 0.5s ease;
-
-  &:hover{
-      transform : scale(1.1)
-  }
 `
 
 const Product = ({img , id , product}) => {
@@ -79,9 +85,6 @@ const Product = ({img , id , product}) => {
             <Link style={{color : 'black'}} to={`/product/${id}`}>
               <SearchOutlinedIcon sx={{fontSize : '20px'}}/>
             </Link>  
-           </Icon>
-           <Icon>
-             <FavoriteBorderOutlinedIcon sx={{fontSize : '20px'}}/>
            </Icon>
          </Info>
        </Container>

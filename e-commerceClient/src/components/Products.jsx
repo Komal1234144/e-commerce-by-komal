@@ -14,7 +14,7 @@ const Products = ({category , filters , sort}) => {
 
   const [products , setProducts] = useState([]); 
   const [filteredProducts , setFilteredProducts] = useState([]); 
-
+  console.log(filters)
  useEffect(()=>{
 
   const getProducts = async()=>{
@@ -36,11 +36,29 @@ const Products = ({category , filters , sort}) => {
 }, [category])
 
 useEffect(()=>{
-  if(filters && filters.color ==='All' ||filters && filters.size==='All'){
+  if((filters && filters.color ==='All') && (filters && filters.size==='All')){
     setFilteredProducts(products)
   }else if(!filters){
     setFilteredProducts(products)
-  }else{
+   }
+   else if(filters.size === 'All' && filters.color !=='All'){
+    setFilteredProducts(
+      products.filter((item)=>{
+        return item['color'].includes(filters.color)
+      })
+    )
+  }
+  else if(filters.color==='All' && filters.size!=='All'){
+    setFilteredProducts(
+      products.filter((item)=>{
+        return item['size'].includes(filters.size)
+      })
+    )
+  }
+  // else if(filters.color==='All' && filters.size==='' || filters.size==='All' && filters.color===''){
+  //      setFilteredProducts(products)
+  // }
+  else{
     setFilteredProducts(
       products.filter((item)=>{
         return(

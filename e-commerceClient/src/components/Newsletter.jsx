@@ -34,6 +34,9 @@ const InputContainer = styled.div`
       padding : 0.7em 0;
       padding-left: 0.5em;
       font-size: clamp(15px , 1.5vw , 20px);
+      &:focus{
+        outline : none
+      }
    }
 
    &>button{

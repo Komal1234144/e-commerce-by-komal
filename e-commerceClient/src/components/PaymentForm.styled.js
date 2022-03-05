@@ -48,12 +48,12 @@ export const FormError = styled.p`
 export const Form = styled.form``
 
 export const Label = styled.label`
-  font-size: 20px; 
+  font-size: clamp(15px , 1.5vw , 20px);
 `
 export const CardWrapper = styled.div`
   width : 90%;
-  height: 40px;
-  padding : 10px 5px;
+  font-size: clamp(15px , 1.5vw , 25px);
+  padding : 0.5em;
   margin : 10px 0;
   border : 2px solid black;
   border-radius: 10px;
@@ -67,7 +67,7 @@ export const ButtonWrapper = styled.div`
 
 export const PayButton = styled.button`
    border : 3px solid black;
-   font-size: 20px;
+   font-size: clamp(15px , 1.2vw , 25px);
    padding : 0.5em;
    margin-left : 30%;
    margin-right : 30%;

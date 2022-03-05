@@ -71,7 +71,7 @@ const ImageContainer = styled.div`
       })}
     &>img{
         display: block;
-        height: 80%;
+        height: 70%;
         width : 100%;
         padding-left : 100px; 
         object-fit: contain;
@@ -87,9 +87,7 @@ const InfoConatiner=styled.div`
         flex : 1;
         display: flex;
         flex-direction: column;
-       
         align-items: center;
-        font-size: x-large;
         margin : auto 100px auto 0;
        
         ${mobile({
@@ -97,30 +95,35 @@ const InfoConatiner=styled.div`
           height : '400px',
           margin : 0,
           padding : '15px 15px 0 0',
-          fontSize : '12px',
           justifyContent : 'center'
         })}
+
+    &>h1{
+      font-size: clamp(17px , 2.2vw , 35px);
+      text-align: center;
+      ${mobile({
+          marginRight : '30px'
+        })}
+    }    
     &>p{
         margin : 50px 0;  
         text-align: center;
-
+        font-size: clamp(12px , 1.5vw , 28px);
         ${mobile({
           margin: '20px 30px 20px 0'
         })}
     }
 
     &>button{
-      padding : 10px;
+      padding : 0.5em;
       border : 2px solid black;
       background-color: transparent;
-      font-size: large;
+      font-size: clamp(12px , 1.5vw , 25px);
       font-weight: 700;
       cursor : pointer;
-
       ${mobile({
-        fontSize : 'medium',
-        padding : '5px'
-      })}
+          marginRight : '30px'
+        })}
     }
 `
 
@@ -140,9 +143,6 @@ const dir=(direction)=>{
    }
 }
 
-const scrollToBelow=()=>{
-  window.scroll({top: 1000, behavior: "smooth"})
-}
 
     return (
        <Container>
@@ -162,7 +162,7 @@ const scrollToBelow=()=>{
                  <Link
                  to="categories"
                  smooth={true}
-                 duration={500}
+                 offset={-50}
              >
                  SHOP NOW
              </Link>

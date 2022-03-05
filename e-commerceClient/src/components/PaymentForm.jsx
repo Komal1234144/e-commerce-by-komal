@@ -183,17 +183,17 @@ export default function PaymentForm() {
   </Styled.GoBack>
   <Styled.Wrapper>
   <Styled.Heading>Enter your Card Info:</Styled.Heading>
-  <h2 style={{textAlign : "center" , color:"blue"}}>(Total amount to be paid is Rs.{total}) </h2>
+  <h2 style={{textAlign : "center" , color:"blue" , marginBottom : '20px'}}>(Total amount to be paid is Rs.{total}) </h2>
    {formError && <Styled.FormError>{formError}</Styled.FormError>}
   <Styled.Form onSubmit={handleSubmit}>
     <Styled.Label>Card no:</Styled.Label>
     <Styled.CardWrapper>
-    <CardNumberElement/>
+    <CardNumberElement className="card"/>
     </Styled.CardWrapper>
     <Styled.Label>Expiry Date:</Styled.Label>
-    <Styled.CardWrapper><CardExpiryElement/></Styled.CardWrapper>
+    <Styled.CardWrapper><CardExpiryElement className="card"/></Styled.CardWrapper>
     <Styled.Label>CVC :</Styled.Label>
-    <Styled.CardWrapper><CardCvcElement/></Styled.CardWrapper>
+    <Styled.CardWrapper><CardCvcElement className="card"/></Styled.CardWrapper>
     <Styled.ButtonWrapper>
     <Styled.PayButton   onClick={handleClick}>Pay Now</Styled.PayButton>
     </Styled.ButtonWrapper>
@@ -214,7 +214,7 @@ export default function PaymentForm() {
         <InfoContainer>
           <ProductDetails>
             <p><b>Product :</b> {product.title}</p>
-            <p><b>ID :</b>{product._id}</p>
+            <p><b>ID: </b>{product._id}</p>
             <ProductColor color={product.color}/>
             <p><b>Size : </b>{product.size}</p>
           </ProductDetails>

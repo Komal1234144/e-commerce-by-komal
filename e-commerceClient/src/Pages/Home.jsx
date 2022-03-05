@@ -18,7 +18,6 @@ const Home=()=>{
    return (
     <Container>
       <Nav/>
-      <Announcement/>
       <Slider/>
       <Categories/>
       <Products/>
